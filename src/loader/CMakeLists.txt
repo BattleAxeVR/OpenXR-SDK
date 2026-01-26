@@ -236,7 +236,7 @@ elseif(WIN32)
             set_target_properties(
                 openxr_loader
                 PROPERTIES MSVC_RUNTIME_LIBRARY
-                           "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
+                           "MultiThreaded$<$<CONFIG:Debug>:Debug>"
             )
         endif()
         target_compile_options(openxr_loader PRIVATE /wd6386)
