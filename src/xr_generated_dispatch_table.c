@@ -515,6 +515,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrSuggestBodyTrackingCalibrationOverrideMETA", (PFN_xrVoidFunction*)&table->SuggestBodyTrackingCalibrationOverrideMETA));
     (get_inst_proc_addr(instance, "xrResetBodyTrackingCalibrationMETA", (PFN_xrVoidFunction*)&table->ResetBodyTrackingCalibrationMETA));
 
+    // ---- XR_META_body_tracking_fidelity extension commands
+    (get_inst_proc_addr(instance, "xrRequestBodyTrackingFidelityMETA", (PFN_xrVoidFunction*)&table->RequestBodyTrackingFidelityMETA));
+
     // ---- XR_FB_face_tracking2 extension commands
     (get_inst_proc_addr(instance, "xrCreateFaceTracker2FB", (PFN_xrVoidFunction*)&table->CreateFaceTracker2FB));
     (get_inst_proc_addr(instance, "xrDestroyFaceTracker2FB", (PFN_xrVoidFunction*)&table->DestroyFaceTracker2FB));
@@ -553,6 +556,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
 
     // ---- XR_QCOM_tracking_optimization_settings extension commands
     (get_inst_proc_addr(instance, "xrSetTrackingOptimizationSettingsHintQCOM", (PFN_xrVoidFunction*)&table->SetTrackingOptimizationSettingsHintQCOM));
+
+    // ---- XR_QCOM_hand_tracking_gesture extension commands
+    (get_inst_proc_addr(instance, "xrGetHandGestureQCOM", (PFN_xrVoidFunction*)&table->GetHandGestureQCOM));
 
     // ---- XR_HTC_passthrough extension commands
     (get_inst_proc_addr(instance, "xrCreatePassthroughHTC", (PFN_xrVoidFunction*)&table->CreatePassthroughHTC));
@@ -624,6 +630,28 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrCaptureSceneAsyncBD", (PFN_xrVoidFunction*)&table->CaptureSceneAsyncBD));
     (get_inst_proc_addr(instance, "xrCaptureSceneCompleteBD", (PFN_xrVoidFunction*)&table->CaptureSceneCompleteBD));
 
+    // ---- XR_BD_spatial_audio_rendering extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateSupportedAudioSampleRateBD", (PFN_xrVoidFunction*)&table->EnumerateSupportedAudioSampleRateBD));
+    (get_inst_proc_addr(instance, "xrQueryFramesPerBufferRangeBD", (PFN_xrVoidFunction*)&table->QueryFramesPerBufferRangeBD));
+    (get_inst_proc_addr(instance, "xrCreateSpatialAudioRendererBD", (PFN_xrVoidFunction*)&table->CreateSpatialAudioRendererBD));
+    (get_inst_proc_addr(instance, "xrDestroySpatialAudioRendererBD", (PFN_xrVoidFunction*)&table->DestroySpatialAudioRendererBD));
+    (get_inst_proc_addr(instance, "xrCreateSoundObstacleMaterialBD", (PFN_xrVoidFunction*)&table->CreateSoundObstacleMaterialBD));
+    (get_inst_proc_addr(instance, "xrUpdateSoundObstacleMaterialConfigBD", (PFN_xrVoidFunction*)&table->UpdateSoundObstacleMaterialConfigBD));
+    (get_inst_proc_addr(instance, "xrDestroySoundObstacleMaterialBD", (PFN_xrVoidFunction*)&table->DestroySoundObstacleMaterialBD));
+    (get_inst_proc_addr(instance, "xrCreateSoundObstacleBD", (PFN_xrVoidFunction*)&table->CreateSoundObstacleBD));
+    (get_inst_proc_addr(instance, "xrUpdateSoundObstacleConfigBD", (PFN_xrVoidFunction*)&table->UpdateSoundObstacleConfigBD));
+    (get_inst_proc_addr(instance, "xrDestroySoundObstacleBD", (PFN_xrVoidFunction*)&table->DestroySoundObstacleBD));
+    (get_inst_proc_addr(instance, "xrCreateSoundObjectBD", (PFN_xrVoidFunction*)&table->CreateSoundObjectBD));
+    (get_inst_proc_addr(instance, "xrUpdateSoundObjectConfigBD", (PFN_xrVoidFunction*)&table->UpdateSoundObjectConfigBD));
+    (get_inst_proc_addr(instance, "xrSubmitSoundObjectBufferBD", (PFN_xrVoidFunction*)&table->SubmitSoundObjectBufferBD));
+    (get_inst_proc_addr(instance, "xrDestroySoundObjectBD", (PFN_xrVoidFunction*)&table->DestroySoundObjectBD));
+    (get_inst_proc_addr(instance, "xrCreateSoundFieldBD", (PFN_xrVoidFunction*)&table->CreateSoundFieldBD));
+    (get_inst_proc_addr(instance, "xrUpdateSoundFieldConfigBD", (PFN_xrVoidFunction*)&table->UpdateSoundFieldConfigBD));
+    (get_inst_proc_addr(instance, "xrSubmitSoundFieldBufferBD", (PFN_xrVoidFunction*)&table->SubmitSoundFieldBufferBD));
+    (get_inst_proc_addr(instance, "xrDestroySoundFieldBD", (PFN_xrVoidFunction*)&table->DestroySoundFieldBD));
+    (get_inst_proc_addr(instance, "xrWaitAudioPeriodBD", (PFN_xrVoidFunction*)&table->WaitAudioPeriodBD));
+    (get_inst_proc_addr(instance, "xrEndAudioPeriodBD", (PFN_xrVoidFunction*)&table->EndAudioPeriodBD));
+
     // ---- XR_EXT_plane_detection extension commands
     (get_inst_proc_addr(instance, "xrCreatePlaneDetectorEXT", (PFN_xrVoidFunction*)&table->CreatePlaneDetectorEXT));
     (get_inst_proc_addr(instance, "xrDestroyPlaneDetectorEXT", (PFN_xrVoidFunction*)&table->DestroyPlaneDetectorEXT));
@@ -660,9 +688,20 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_ANDROID_passthrough_camera_state extension commands
     (get_inst_proc_addr(instance, "xrGetPassthroughCameraStateANDROID", (PFN_xrVoidFunction*)&table->GetPassthroughCameraStateANDROID));
 
+    // ---- XR_ANDROID_composition_layer_passthrough_mesh extension commands
+    (get_inst_proc_addr(instance, "xrCreatePassthroughLayerANDROID", (PFN_xrVoidFunction*)&table->CreatePassthroughLayerANDROID));
+    (get_inst_proc_addr(instance, "xrDestroyPassthroughLayerANDROID", (PFN_xrVoidFunction*)&table->DestroyPassthroughLayerANDROID));
+    (get_inst_proc_addr(instance, "xrSetPassthroughLayerMeshANDROID", (PFN_xrVoidFunction*)&table->SetPassthroughLayerMeshANDROID));
+
     // ---- XR_ANDROID_raycast extension commands
     (get_inst_proc_addr(instance, "xrEnumerateRaycastSupportedTrackableTypesANDROID", (PFN_xrVoidFunction*)&table->EnumerateRaycastSupportedTrackableTypesANDROID));
     (get_inst_proc_addr(instance, "xrRaycastANDROID", (PFN_xrVoidFunction*)&table->RaycastANDROID));
+
+    // ---- XR_ANDROID_performance_metrics extension commands
+    (get_inst_proc_addr(instance, "xrEnumeratePerformanceMetricsCounterPathsANDROID", (PFN_xrVoidFunction*)&table->EnumeratePerformanceMetricsCounterPathsANDROID));
+    (get_inst_proc_addr(instance, "xrSetPerformanceMetricsStateANDROID", (PFN_xrVoidFunction*)&table->SetPerformanceMetricsStateANDROID));
+    (get_inst_proc_addr(instance, "xrGetPerformanceMetricsStateANDROID", (PFN_xrVoidFunction*)&table->GetPerformanceMetricsStateANDROID));
+    (get_inst_proc_addr(instance, "xrQueryPerformanceMetricsCounterANDROID", (PFN_xrVoidFunction*)&table->QueryPerformanceMetricsCounterANDROID));
 
     // ---- XR_ANDROID_trackables_object extension commands
     (get_inst_proc_addr(instance, "xrGetTrackableObjectANDROID", (PFN_xrVoidFunction*)&table->GetTrackableObjectANDROID));
@@ -703,6 +742,15 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrStartColocationAdvertisementMETA", (PFN_xrVoidFunction*)&table->StartColocationAdvertisementMETA));
     (get_inst_proc_addr(instance, "xrStopColocationAdvertisementMETA", (PFN_xrVoidFunction*)&table->StopColocationAdvertisementMETA));
 
+    // ---- XR_META_environment_raycast extension commands
+    (get_inst_proc_addr(instance, "xrCreateEnvironmentRaycasterAsyncMETA", (PFN_xrVoidFunction*)&table->CreateEnvironmentRaycasterAsyncMETA));
+    (get_inst_proc_addr(instance, "xrCreateEnvironmentRaycasterCompleteMETA", (PFN_xrVoidFunction*)&table->CreateEnvironmentRaycasterCompleteMETA));
+    (get_inst_proc_addr(instance, "xrDestroyEnvironmentRaycasterMETA", (PFN_xrVoidFunction*)&table->DestroyEnvironmentRaycasterMETA));
+    (get_inst_proc_addr(instance, "xrPerformEnvironmentRaycastMETA", (PFN_xrVoidFunction*)&table->PerformEnvironmentRaycastMETA));
+
+    // ---- XR_META_tile_properties_hint extension commands
+    (get_inst_proc_addr(instance, "xrSetTilePropertiesHintMETA", (PFN_xrVoidFunction*)&table->SetTilePropertiesHintMETA));
+
     // ---- XR_ANDROID_anchor_sharing_export extension commands
 #if defined(XR_USE_PLATFORM_ANDROID)
     (get_inst_proc_addr(instance, "xrShareAnchorANDROID", (PFN_xrVoidFunction*)&table->ShareAnchorANDROID));
@@ -714,6 +762,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     // ---- XR_ANDROID_trackables_marker extension commands
     (get_inst_proc_addr(instance, "xrGetTrackableMarkerANDROID", (PFN_xrVoidFunction*)&table->GetTrackableMarkerANDROID));
 
+    // ---- XR_ANDROID_trackables_qr_code extension commands
+    (get_inst_proc_addr(instance, "xrGetTrackableQrCodeANDROID", (PFN_xrVoidFunction*)&table->GetTrackableQrCodeANDROID));
+
     // ---- XR_ANDROID_trackables_image extension commands
     (get_inst_proc_addr(instance, "xrCreateTrackableImageDatabaseAsyncANDROID", (PFN_xrVoidFunction*)&table->CreateTrackableImageDatabaseAsyncANDROID));
     (get_inst_proc_addr(instance, "xrCreateTrackableImageDatabaseCompleteANDROID", (PFN_xrVoidFunction*)&table->CreateTrackableImageDatabaseCompleteANDROID));
@@ -721,6 +772,15 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrAddTrackableImageDatabaseANDROID", (PFN_xrVoidFunction*)&table->AddTrackableImageDatabaseANDROID));
     (get_inst_proc_addr(instance, "xrRemoveTrackableImageDatabaseANDROID", (PFN_xrVoidFunction*)&table->RemoveTrackableImageDatabaseANDROID));
     (get_inst_proc_addr(instance, "xrGetTrackableImageANDROID", (PFN_xrVoidFunction*)&table->GetTrackableImageANDROID));
+
+    // ---- XR_ANDROID_scene_meshing extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateSupportedSemanticLabelSetsANDROID", (PFN_xrVoidFunction*)&table->EnumerateSupportedSemanticLabelSetsANDROID));
+    (get_inst_proc_addr(instance, "xrCreateSceneMeshingTrackerANDROID", (PFN_xrVoidFunction*)&table->CreateSceneMeshingTrackerANDROID));
+    (get_inst_proc_addr(instance, "xrDestroySceneMeshingTrackerANDROID", (PFN_xrVoidFunction*)&table->DestroySceneMeshingTrackerANDROID));
+    (get_inst_proc_addr(instance, "xrCreateSceneMeshSnapshotANDROID", (PFN_xrVoidFunction*)&table->CreateSceneMeshSnapshotANDROID));
+    (get_inst_proc_addr(instance, "xrDestroySceneMeshSnapshotANDROID", (PFN_xrVoidFunction*)&table->DestroySceneMeshSnapshotANDROID));
+    (get_inst_proc_addr(instance, "xrGetAllSubmeshStatesANDROID", (PFN_xrVoidFunction*)&table->GetAllSubmeshStatesANDROID));
+    (get_inst_proc_addr(instance, "xrGetSubmeshDataANDROID", (PFN_xrVoidFunction*)&table->GetSubmeshDataANDROID));
 
     // ---- XR_EXT_spatial_entity extension commands
     (get_inst_proc_addr(instance, "xrEnumerateSpatialCapabilitiesEXT", (PFN_xrVoidFunction*)&table->EnumerateSpatialCapabilitiesEXT));
@@ -758,6 +818,16 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrPersistSpatialEntityCompleteEXT", (PFN_xrVoidFunction*)&table->PersistSpatialEntityCompleteEXT));
     (get_inst_proc_addr(instance, "xrUnpersistSpatialEntityAsyncEXT", (PFN_xrVoidFunction*)&table->UnpersistSpatialEntityAsyncEXT));
     (get_inst_proc_addr(instance, "xrUnpersistSpatialEntityCompleteEXT", (PFN_xrVoidFunction*)&table->UnpersistSpatialEntityCompleteEXT));
+
+    // ---- XR_ANDROID_spatial_discovery_raycast extension commands
+    (get_inst_proc_addr(instance, "xrCreateSpatialRaycastSnapshotANDROID", (PFN_xrVoidFunction*)&table->CreateSpatialRaycastSnapshotANDROID));
+
+    // ---- XR_ANDROID_spatial_entity_bound_anchor extension commands
+    (get_inst_proc_addr(instance, "xrEnumerateSpatialAnchorAttachableComponentsANDROID", (PFN_xrVoidFunction*)&table->EnumerateSpatialAnchorAttachableComponentsANDROID));
+
+    // ---- XR_ANDROID_spatial_anchor_space extension commands
+    (get_inst_proc_addr(instance, "xrCreateSpatialAnchorSpaceANDROID", (PFN_xrVoidFunction*)&table->CreateSpatialAnchorSpaceANDROID));
+    (get_inst_proc_addr(instance, "xrCreateSpatialAnchorSpaceFromIdANDROID", (PFN_xrVoidFunction*)&table->CreateSpatialAnchorSpaceFromIdANDROID));
 }
 
 
