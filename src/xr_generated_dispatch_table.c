@@ -669,6 +669,12 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrGetTrackablePlaneANDROID", (PFN_xrVoidFunction*)&table->GetTrackablePlaneANDROID));
     (get_inst_proc_addr(instance, "xrCreateAnchorSpaceANDROID", (PFN_xrVoidFunction*)&table->CreateAnchorSpaceANDROID));
 
+    // ---- XR_ANDROID_eye_tracking extension commands
+    (get_inst_proc_addr(instance, "xrCreateEyeTrackerANDROID", (PFN_xrVoidFunction*)&table->CreateEyeTrackerANDROID));
+    (get_inst_proc_addr(instance, "xrDestroyEyeTrackerANDROID", (PFN_xrVoidFunction*)&table->DestroyEyeTrackerANDROID));
+    (get_inst_proc_addr(instance, "xrGetFineTrackingEyesInfoANDROID", (PFN_xrVoidFunction*)&table->GetFineTrackingEyesInfoANDROID));
+    (get_inst_proc_addr(instance, "xrGetCoarseTrackingEyesInfoANDROID", (PFN_xrVoidFunction*)&table->GetCoarseTrackingEyesInfoANDROID));
+
     // ---- XR_ANDROID_device_anchor_persistence extension commands
     (get_inst_proc_addr(instance, "xrEnumerateSupportedPersistenceAnchorTypesANDROID", (PFN_xrVoidFunction*)&table->EnumerateSupportedPersistenceAnchorTypesANDROID));
     (get_inst_proc_addr(instance, "xrCreateDeviceAnchorPersistenceANDROID", (PFN_xrVoidFunction*)&table->CreateDeviceAnchorPersistenceANDROID));
@@ -732,9 +738,16 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrDestroyFacialExpressionClientML", (PFN_xrVoidFunction*)&table->DestroyFacialExpressionClientML));
     (get_inst_proc_addr(instance, "xrGetFacialExpressionBlendShapePropertiesML", (PFN_xrVoidFunction*)&table->GetFacialExpressionBlendShapePropertiesML));
 
+    // ---- XR_META_boundary_visibility extension commands
+    (get_inst_proc_addr(instance, "xrRequestBoundaryVisibilityMETA", (PFN_xrVoidFunction*)&table->RequestBoundaryVisibilityMETA));
+
     // ---- XR_META_simultaneous_hands_and_controllers extension commands
     (get_inst_proc_addr(instance, "xrResumeSimultaneousHandsAndControllersTrackingMETA", (PFN_xrVoidFunction*)&table->ResumeSimultaneousHandsAndControllersTrackingMETA));
     (get_inst_proc_addr(instance, "xrPauseSimultaneousHandsAndControllersTrackingMETA", (PFN_xrVoidFunction*)&table->PauseSimultaneousHandsAndControllersTrackingMETA));
+
+    // ---- XR_META_spatial_entity_room_mesh extension commands
+    (get_inst_proc_addr(instance, "xrGetSpaceRoomMeshMETA", (PFN_xrVoidFunction*)&table->GetSpaceRoomMeshMETA));
+    (get_inst_proc_addr(instance, "xrGetSpaceRoomMeshFaceIndicesMETA", (PFN_xrVoidFunction*)&table->GetSpaceRoomMeshFaceIndicesMETA));
 
     // ---- XR_META_colocation_discovery extension commands
     (get_inst_proc_addr(instance, "xrStartColocationDiscoveryMETA", (PFN_xrVoidFunction*)&table->StartColocationDiscoveryMETA));
@@ -750,6 +763,11 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
 
     // ---- XR_META_tile_properties_hint extension commands
     (get_inst_proc_addr(instance, "xrSetTilePropertiesHintMETA", (PFN_xrVoidFunction*)&table->SetTilePropertiesHintMETA));
+
+    // ---- XR_ANDROID_light_estimation extension commands
+    (get_inst_proc_addr(instance, "xrCreateLightEstimatorANDROID", (PFN_xrVoidFunction*)&table->CreateLightEstimatorANDROID));
+    (get_inst_proc_addr(instance, "xrDestroyLightEstimatorANDROID", (PFN_xrVoidFunction*)&table->DestroyLightEstimatorANDROID));
+    (get_inst_proc_addr(instance, "xrGetLightEstimateANDROID", (PFN_xrVoidFunction*)&table->GetLightEstimateANDROID));
 
     // ---- XR_ANDROID_anchor_sharing_export extension commands
 #if defined(XR_USE_PLATFORM_ANDROID)
@@ -803,6 +821,9 @@ void GeneratedXrPopulateDispatchTable(struct XrGeneratedDispatchTable *table,
     (get_inst_proc_addr(instance, "xrGetSpatialBufferFloatEXT", (PFN_xrVoidFunction*)&table->GetSpatialBufferFloatEXT));
     (get_inst_proc_addr(instance, "xrGetSpatialBufferVector2fEXT", (PFN_xrVoidFunction*)&table->GetSpatialBufferVector2fEXT));
     (get_inst_proc_addr(instance, "xrGetSpatialBufferVector3fEXT", (PFN_xrVoidFunction*)&table->GetSpatialBufferVector3fEXT));
+
+    // ---- XR_EXT_stationary_reference_space extension commands
+    (get_inst_proc_addr(instance, "xrGetStationaryReferenceSpaceGenerationIdEXT", (PFN_xrVoidFunction*)&table->GetStationaryReferenceSpaceGenerationIdEXT));
 
     // ---- XR_EXT_spatial_anchor extension commands
     (get_inst_proc_addr(instance, "xrCreateSpatialAnchorEXT", (PFN_xrVoidFunction*)&table->CreateSpatialAnchorEXT));

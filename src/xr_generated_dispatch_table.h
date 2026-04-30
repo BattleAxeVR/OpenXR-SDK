@@ -675,6 +675,12 @@ struct XrGeneratedDispatchTable {
     PFN_xrGetTrackablePlaneANDROID GetTrackablePlaneANDROID;
     PFN_xrCreateAnchorSpaceANDROID CreateAnchorSpaceANDROID;
 
+    // ---- XR_ANDROID_eye_tracking extension commands
+    PFN_xrCreateEyeTrackerANDROID CreateEyeTrackerANDROID;
+    PFN_xrDestroyEyeTrackerANDROID DestroyEyeTrackerANDROID;
+    PFN_xrGetFineTrackingEyesInfoANDROID GetFineTrackingEyesInfoANDROID;
+    PFN_xrGetCoarseTrackingEyesInfoANDROID GetCoarseTrackingEyesInfoANDROID;
+
     // ---- XR_ANDROID_device_anchor_persistence extension commands
     PFN_xrEnumerateSupportedPersistenceAnchorTypesANDROID EnumerateSupportedPersistenceAnchorTypesANDROID;
     PFN_xrCreateDeviceAnchorPersistenceANDROID CreateDeviceAnchorPersistenceANDROID;
@@ -738,9 +744,16 @@ struct XrGeneratedDispatchTable {
     PFN_xrDestroyFacialExpressionClientML DestroyFacialExpressionClientML;
     PFN_xrGetFacialExpressionBlendShapePropertiesML GetFacialExpressionBlendShapePropertiesML;
 
+    // ---- XR_META_boundary_visibility extension commands
+    PFN_xrRequestBoundaryVisibilityMETA RequestBoundaryVisibilityMETA;
+
     // ---- XR_META_simultaneous_hands_and_controllers extension commands
     PFN_xrResumeSimultaneousHandsAndControllersTrackingMETA ResumeSimultaneousHandsAndControllersTrackingMETA;
     PFN_xrPauseSimultaneousHandsAndControllersTrackingMETA PauseSimultaneousHandsAndControllersTrackingMETA;
+
+    // ---- XR_META_spatial_entity_room_mesh extension commands
+    PFN_xrGetSpaceRoomMeshMETA GetSpaceRoomMeshMETA;
+    PFN_xrGetSpaceRoomMeshFaceIndicesMETA GetSpaceRoomMeshFaceIndicesMETA;
 
     // ---- XR_META_colocation_discovery extension commands
     PFN_xrStartColocationDiscoveryMETA StartColocationDiscoveryMETA;
@@ -756,6 +769,11 @@ struct XrGeneratedDispatchTable {
 
     // ---- XR_META_tile_properties_hint extension commands
     PFN_xrSetTilePropertiesHintMETA SetTilePropertiesHintMETA;
+
+    // ---- XR_ANDROID_light_estimation extension commands
+    PFN_xrCreateLightEstimatorANDROID CreateLightEstimatorANDROID;
+    PFN_xrDestroyLightEstimatorANDROID DestroyLightEstimatorANDROID;
+    PFN_xrGetLightEstimateANDROID GetLightEstimateANDROID;
 
     // ---- XR_ANDROID_anchor_sharing_export extension commands
 #if defined(XR_USE_PLATFORM_ANDROID)
@@ -809,6 +827,9 @@ struct XrGeneratedDispatchTable {
     PFN_xrGetSpatialBufferFloatEXT GetSpatialBufferFloatEXT;
     PFN_xrGetSpatialBufferVector2fEXT GetSpatialBufferVector2fEXT;
     PFN_xrGetSpatialBufferVector3fEXT GetSpatialBufferVector3fEXT;
+
+    // ---- XR_EXT_stationary_reference_space extension commands
+    PFN_xrGetStationaryReferenceSpaceGenerationIdEXT GetStationaryReferenceSpaceGenerationIdEXT;
 
     // ---- XR_EXT_spatial_anchor extension commands
     PFN_xrCreateSpatialAnchorEXT CreateSpatialAnchorEXT;
